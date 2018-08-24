@@ -1,0 +1,780 @@
+html {
+    font-family: "Montserrat",sans-serif;
+}
+
+html, body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eeebfc;
+    padding: 5vw 2vw 5vw;
+}
+
+#wrapper {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 0 auto 100px;
+    padding: 60px 20px 105px;
+    max-width: 932px;
+}
+
+.padding-text p {
+    margin: 0px 35px 20px;
+    font-family: Lato,Arial,sans-serif;
+}
+
+#front .padding-text p {
+    margin: 0px 35px 10px;
+}
+
+#front .special-spacer {
+	clear: both;
+	line-height: 0px;
+	padding-top: 20px;
+}
+
+.mission {
+    font-family: Lato,Arial,sans-serif;
+    padding: 35px 35px 55px;
+}
+
+.mission p {
+    padding: 10px 10px 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Basic Typography */
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    font-family: Lato,Arial,sans-serif;
+    margin-bottom: 15px;
+}
+
+.bold {
+    
+	font-weight: 900;
+	font-size: 18px;
+}
+
+.float-left .bold {
+}
+
+h1 {
+    background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+    color: #003366;
+    font-size: 24px;
+    width: auto;
+    margin: 0px 0px 16px;
+}
+
+.large-black-text {
+    font-size: 46px;
+    color: #333;
+    letter-spacing: -1px;
+    line-height: 48px;
+}
+
+.medium-black-text {
+    font-size: 28px;
+    color: #666;
+    padding: 20px;
+}
+
+.fill {
+    background: rgba(0, 0, 0, 0) url("../images/fill-5.png") no-repeat scroll 0px 0px;
+    float: left;
+    height: 26px;
+    margin: 4px 0 0 5px;
+}
+
+.sub-text {
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: none;
+    margin: 15px 0px;
+}
+
+.small-text {
+    font-size: 16px;
+    margin-top: -40px;
+}
+
+.cur {
+    font-size: 30px;
+    line-height: 32px;
+    vertical-align: 10px;
+}
+
+.fundraiser {
+    font-size: 24px;
+    font-weight: 900;
+    color: #443d3d;
+}
+
+.asterix {
+    color: red;
+}
+
+.headbar-text {
+    color: white;
+    font-family: montserrat,sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.body-text {
+    padding: 20px;
+}
+
+/* END ------ Basic Typography */
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: #014492;
+}
+
+/* END ----- Links */
+
+/* Sections */
+
+.align-left {
+    text-align: left;
+    font-size: 19px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.width-large {
+    width: 63%;
+}
+
+.width-small {
+    width: 33%;
+}
+
+.width-full {
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.outline {
+    border-color: #e8e8e8;
+    border-style: solid;
+    border-width: 1px 1px 3px;
+    border-radius: 8px;
+    min-height: 10px;
+}
+
+.bar-narrow {
+    height: 60px;
+    margin: 20px 0px;
+}
+
+.box-body {
+    padding: 20px;
+}
+
+.center {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section headers */
+
+.headbar {
+    background: #88bee1 none repeat scroll 0 0;
+    border-bottom: 1px solid #e3e3e3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    text-shadow: 1px 1px #437ea9;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.details {
+    height: 390px;
+}
+
+.details::after {
+    clear: both;
+}
+
+.about-header {
+    background: #88bee1 none repeat scroll 0 0;
+    border-bottom: 0px solid #dddddd;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: block;
+    float: left;
+    line-height: 19px;
+    padding: 20px;
+    width: 55%;
+    min-height: 20px;
+}
+
+.vote-note {
+    background-color: #318ed1;
+    float: right;
+    padding: 20px 30px;
+    text-align: center;
+    width: 33%;
+    font-size: 16px;
+    min-height: 20px;
+}
+
+/* END ----- Sections*/
+
+img {
+    width: 100%;
+}
+
+/* Buttons */
+
+.btn {
+    display: block;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3) !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    border-radius: 8px;
+
+}
+
+.btn-large {
+    background-color: #318ed1;
+    border-color: #513c69;
+    font-size: 28px;
+    height: 60px;
+    width: 264px;
+    line-height: 64px;
+    text-shadow: 1px 1px 1px #000000 !important;
+}
+
+.btn-medium {
+    background-color: #318ed1;
+    border-color: #513c69;
+    font-size: 28px;
+    height: 60px;
+    width: 164px;
+    line-height: 64px;
+    text-shadow: 1px 1px 1px #000000 !important;
+}
+
+.btn-bottom {
+    margin-bottom: 20px;
+}
+
+.btn-wide {
+    width: 100%;
+}
+
+.vote-page .btn-wide {
+    width: 100%;
+    margin-top: 30px;
+    line-height: inherit;
+}
+
+.fame .btn-large {
+    height: 90px;
+    background-color: #88bee1;
+    border: none;
+}
+
+.btn-win {
+    line-height: 70px;
+    border: none;
+}
+
+.btn-fame {
+    padding-bottom: 10px;
+}
+
+.light-blue {
+    background-color: #88bee1;
+}
+
+/* END ------ Buttons */
+
+form {
+    margin-bottom: 100px;
+}
+
+
+/* Lists */
+
+.bump-right {
+    margin-left: 5px;
+}
+
+/* END ------ Lists  */
+
+/* Social Media Links */
+
+a.social-link img {
+    width: 40px;
+}
+
+.social-link {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.social-link-last {
+    margin-right: 10px;
+}
+
+.copy-paste {
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* END ----- Social Media Links */
+
+/* Fundraising Bar */
+
+.bar {
+    background: rgba(0, 0, 0, 0) url("../images/campaign-sp.png") no-repeat scroll 0 -133px;
+    display: block;
+    height: 34px;
+    width: 264px;
+}
+
+/* END ----- Fundraising Bar */
+
+/* Forms */
+
+input {
+    border: 1px solid grey;
+    font-size: 14px;
+}
+
+.input {
+    /*width: 50px;*/
+}
+
+fieldset {
+    line-height: 26px;
+}
+
+/* END ----- Forms */
+
+
+
+/* Special Unique Classes */
+
+.photoframe {
+    padding: 20px;
+}
+
+.donate-page .details {
+    height: auto;
+}
+
+/* Mobile Devices */
+
+@media only screen and (max-width: 900px) {
+    .float-right {
+        float: left;
+    }
+
+    .width-small,
+    .width-large {
+        width: 90%;
+    }
+    .width-small, .width-large {
+        width: 100%;
+    }
+
+    .fundimage {
+        margin-bottom: 20px;
+    }
+
+    .large-black-text {
+        text-align: center;
+    }
+
+    .bar {
+        background: rgba(0, 0, 0, 0) url("../images/campaign-sp.png") no-repeat scroll 0 -113px / 880px auto;
+        width: 240px ;
+        height: 42px;
+        margin: 0 auto;
+    }
+
+    .btn-large {
+        width: 240px;
+    }
+
+    .padding-text p {
+        margin: 0 5px 20px;
+    }
+
+    .view-donations {
+        font-size: 20px;
+    }
+
+    .copy-paste {
+        float: left;
+    }
+
+
+
+    .body-text {
+        padding: 0px;
+    }
+
+    /* About Page */
+
+    .vote-note,
+    .about-header {
+        display: block;
+        float: none;
+        width: 90%;
+        margin-bottom: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: inherit 5%;
+        text-align: center;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #social-bar.bar-narrow {
+        height: 120px;
+    }
+}
+
+/* Color Overrides */
+/* These are classes that can be used to override the default color on items */
+
+.dark-blue {
+    background: #318ed1;
+}
+
+/* VOTE PAGE */
+
+#left-side {
+
+    
+    width: 52%;
+}
+
+#right-side {
+    width: 38%;
+	border-left: 1px solid #003366;
+	padding-left: 6%;
+	padding-bottom: 60px;
+}
+
+#left-side input {
+    margin-left: 4px;  /* was 20px */
+}
+
+.bottom input {
+    width: 95px;
+    height: 25px;
+    margin-right: 4px;  /* was 20px */
+    padding: 3px;
+}
+
+.address-form {
+    float: right;
+    margin-top: 20px;
+}
+
+.address-form input {
+
+}
+
+/* CHECK THIS LATER */
+
+/*.vote-page .address-form input {
+    width: 130px;
+}*/
+
+.pay_image {
+    border: 1px solid #003366;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #003366;
+    padding: 8px;
+    width: 135px;
+    margin-bottom: 20px;
+}
+
+.credit_cards img {
+    width: 200px;
+}
+
+.vote-page #wrapper {
+    border: 1px solid #003366;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #003366;
+}
+
+.vote-page {
+  color: #003366;  
+}
+
+.blocks {
+    margin-top: 0;
+    padding: 20px 50px 30px;
+}
+
+.other-amount,
+label {
+    border: 0 solid orange;
+    color: #003366;
+    font-family: Lato,sans;
+    font-size: 13pt;
+    padding: 5px;
+    text-align: right;
+    width: 200px;
+}
+
+.label {
+    width: 150px;
+}
+
+/* Vote Page Media Query */
+
+@media only screen and (max-width: 900px) {
+    #left-side {
+        border-right: 0px solid #003366;
+        padding-right: 0%;
+        width: 100%;
+    }
+	
+    #right-side {
+        border-left: 0px solid #003366;  /* hide left border on small screens */
+    }
+	
+    .input {
+        width: 60%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    #right-side tr {
+        width: 100%;
+    }
+
+    .input input {
+        width: 100%;
+    }
+
+    .label {
+        width: 30%;
+    }
+
+    .blocks {
+        padding: 20px 10px 30px;
+    }
+
+    #left-side input {
+        margin-left: 5px;
+    }
+
+    #left-side h1 {
+        margin-top: 50px;
+    }
+
+    .vote-page fieldset {
+     /*   font-size: 14px;  */
+    }
+
+    .vote-page table {
+        border-top: 1px solid black;
+
+        margin-top: 0px;
+    }
+
+    .vote-page .address-header-1 {
+        padding: 30px 0px 10px;
+    }
+
+    .vote-page .pay_image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 8px;
+        width: 100px;
+    }
+    
+    .vote-page .credit_cards img {
+        width: 220px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .input {
+        width: 50%;
+    }
+
+    .label {
+        width: 40%;
+    }
+
+    #wrapper {
+        background: #fff none repeat scroll 0 0;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        margin: 0 auto 100px;
+        max-width: 932px;
+        padding: 40px 10px 100px;
+    }
+}
+
+/* Mobile Menu */
+
+#hamburger {
+    width: 50px;
+}
+
+#mobile-menu {
+  overflow: hidden;
+  transition: max-height .5s;
+  max-height: 0;
+  margin-bottom: 20px;
+}
+
+#mobile-menu ul {
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+}
+
+#mobile-menu li {
+  width: 100%;
+  padding: 10px 5px 10px 15px;
+  background-color: #88BEE1;
+  list-style-type: none;
+  margin: 0px;
+  border-bottom: 1px solid black;
+}
+
+#mobile-menu li.menu-first {
+  border-top: 1px solid black;
+}
+
+#mobile-menu a {
+  text-decoration: none;
+}
+
+#mobile-menu li:hover {
+  background-color: #318ED1;
+  color: white;
+}
+
+#mobile-menu,
+.menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 520px) {
+  #mobile-menu,
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Changes to have social media bar move to bottom on moblile */
+
+#social-bar-bottom.outline {
+    border: none;
+}
+
+#social-bar-bottom {
+    display: block;
+    margin: -20px auto;
+    height: 100px;
+    padding-top: 0px;
+}
+
+#social-bar-bottom > div {
+
+    display: block;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 900px) {
+    #social-bar-bottom {
+        display: none;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .not-mobile {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #social-bar {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .not-mobile {
+        display: none;
+    }
+
+    .fame {
+        margin-top: 30px;
+    }
+}
+
+.spread {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+}
+

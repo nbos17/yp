@@ -1,0 +1,266 @@
+
+<html>
+<head>
+  <title>Donation Page</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/modals.css"/>
+  <link rel="stylesheet" type="text/css" href="css/yansplace.css"/>
+  <link rel="stylesheet" type="text/css" href="css/donate.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext:300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Need this to tell mobile phones to respond to media queries that change format
+       on small screens.  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body class="donate-page">
+  <img id="hamburger" class="menu-icon" src="images/menu.png">
+  <div id="mobile-menu" class="hide">
+    <ul>
+      <a href="index.html"><li class="menu-first">Donate</li></a>
+      <a href="about.html"><li>About the Project</li></a>
+      <a href="vote.html"><li>Vote</li></a>
+      <a href="wall-of-fame.html"><li>Wall of Fame</li></a>
+    </ul>
+  </div>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">x</span>
+      <p class="modal-header">Yan's Place</p>
+<!--       <h2>By sharing you could raise $30</h2> -->
+
+      <p class="align-left">Thank you for your interest in entering to win prizes for Yan's Place.  At this time however, the contest is 
+      under construction and not available.</p>
+
+      <p class="align-left">You will automatically be directed to Yan's Place 
+      <a href="vote.html">Support the Ngok</a> page.  On this page we ask that you 
+      share your opinion.  We take your opinions into great 
+      consideration when determining future designs for the 
+      Ngok.  Help mold the future of the Ngok.</p>
+
+      <p class="not-available">Not available.</p>
+
+      <div class="modal-social-media">
+        <a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
+        <a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
+
+        <div><a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png"></a></div>
+      </div>
+
+    </div>
+
+  </div> 
+
+  <div id="thanksModal" class="modal2">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close2">x</span>
+      <p class="modal-header">Yan's Place</p>
+<!--       <h2>By sharing you could raise $30</h2> -->
+
+      <p class="fundraiser">This fundraiser needs your support.</p>
+
+      <a id="btn-modal-fundraiser" class="btn btn-large" href="">Donate Now!</a>
+
+      <div class="modal-social-media">
+        <a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
+        <a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
+
+        <div><a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png"></a></div>
+      </div>
+
+    </div>
+
+  </div> 
+
+  <div id="wrapper">
+    <section class="float-left width-large outline">
+
+      <form id="donate_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <p class="medium-black-text">Donation Amount</p>
+        <hr>
+        <div class="donationbox">
+        
+         <div class="donationamount">
+          <input type="text" 
+            value="" style="z-index:1;" name="amount" maxlength="9" autocomplete="off" tabindex="1">            
+         </div>
+        </div>
+        <hr>
+        <div class="donationform">
+
+
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="item_name" value="Yan's Place thanks you for your support.">
+          <input type="hidden" name="business" value="shop@yansplace.com">
+
+          <input  class="btn btn-large donate-button" type="submit" name="Donate" value="Donate">
+        </div> 
+        
+      </form>
+      <p class="clear">
+      <hr class="hr-adjust">
+
+    </section>
+
+    <section class="float-left width-large margin-top-20 mobile-only">
+
+      <div class="padding-text">
+        <p class="bold">Help me bring the Ngok Design Case with Stand to life!</p>
+        <p>At Yan's Place our mission is to create innovative products that make technology more accessible and convenient to consumers. All donations will support the start-up costs, tools and equipment necessary for making the Ngok Design Case with Stand possible!</p>
+        <p>Read more about the Ngok project by clicking <a href="about.html">About this Project</a>.</p>
+        <p>Thank you for supporting Yan's Place!</p>
+      </div>
+    
+    </section>
+
+
+
+    <section class="float-right width-small outline details">
+
+      <div class="headbar">Ngok Design Case with Stand</div>
+            <div class="photoframe">
+              <img alt="tech photo" src="images/donate-sm.jpg">
+            </div>
+      <div class="box-body">
+        
+        <div class="large-black-text">
+          <span class="cur">$</span> 0  <!-- WAS: $193.00 -->
+        </div>
+        <div class="sub-text">
+          <span class="of"> pledged of </span><span class="goal">$150,000</span>
+        </div>
+        <div class="bar">
+          <div class="fill" style="width: 0%;"></div>  <!-- Change WIDTH to adjust the bar -->
+        </div>                   <!-- Was: "width 60%;" -->
+                                      
+        <p class="sub-text"> Funded by    <!-- Change the "funded by" text here -->                         
+          <span>0</span> people in     <!-- Funded by 0 people in 131 days -->
+          <span>131</span> <!-- WAS: 108 | 5/11-->
+          days  <!-- WAS: months -->
+        </p>
+
+      </div>
+
+
+    </section>
+
+    <section id="social-bar" class="float-left width-large outline bar-narrow">
+      <a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
+      <a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
+
+        <div><a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png"></a></div>
+    
+    </section>
+
+
+    <section class="float-left width-large margin-top-20 not-mobile">
+
+      <div class="padding-text">
+        <p class="bold">Help me bring the Ngok Design Case with Stand to life!</p>
+        <p>At Yan's Place our mission is to create innovative products that make technology more accessible and convenient to consumers. All donations will support the start-up costs, tools and equipment necessary for making the Ngok Design Case with Stand possible!</p>
+        <p>Read more about the Ngok project by clicking <a href="about.html">About this Project</a>.</p>
+        <p>Thank you for supporting Yan's Place!</p>
+      </div>
+    
+    </section>
+
+    <section class="float-right width-small fame">
+
+      <button id="btn-raffle" class="btn btn-large btn-bottom btn-win btn-fame" href="">
+        <div class="view-donations">Enter to Win!</div>
+      </button>
+
+      <button id="btn-thanks" class="btn btn-large btn-fame" href="">
+        <div class="view-donations">Wall of Fame</div>
+        <div class="small-text">Thank You</div>
+      </button>
+
+    </section>
+    <p class="clear width-full"> </p>
+
+
+    <div id="social-bar-bottom">
+      <p class="bold margin-top-20 spread">Help Spread the Word!</p>
+      <hr>
+      <div>
+      <a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
+      <a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
+
+        <div>
+          <a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png">
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <p class="clear width-full"> </p>
+
+  </div>
+
+<script type="text/javascript">
+  // Get Modal
+var modal = document.getElementById('myModal');
+
+// Get Button
+var btn = document.getElementById("btn-raffle");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Get Modal
+var modal2 = document.getElementById('thanksModal');
+
+// Get Button
+var btn = document.getElementById("btn-thanks");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close2")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal2.style.display = "none";
+    }
+}
+
+
+</script>
+<script type="text/javascript" src="js/yans.js"></script>
+<!--   <script type="text/javascript" src="js/raffle.js"></script> -->
+</body>
+</html>
