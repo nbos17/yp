@@ -11,8 +11,6 @@ var nodemailer = require('nodemailer');
 var PORT = process.env.PORT || 3000;
 
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/foodapp";
-
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
@@ -23,8 +21,6 @@ app.use(express.static(public));
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
 });
-
-//app.use(favicon(path.join(__dirname, 'public', 'fimage.png'))); 
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
