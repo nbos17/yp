@@ -41,13 +41,13 @@ app.post('/email', function (req, res) {
 	var transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
-			user: 'nbos0531@gmail.com',
-			pass: 'sixhbpH7&2016'
+			user: 'tt886004@gmail.com',
+			pass: 'Qazwsx31'
 		}
 	});
 
 	var mailOptions = {
-	  from: 'nbos0531@gmail.com',
+	  from: 'tt886004@gmail.com',
 	  to: 'nathanbos31@gmail.com',
 	  subject: 'New Website Message!',
 	  text: text
