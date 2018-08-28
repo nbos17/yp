@@ -48,7 +48,7 @@ app.post('/email', function (req, res) {
 
 	var mailOptions = {
 	  from: 'tt886004@gmail.com',
-	  to: 'nathanbos31@gmail.com',
+	  to: 'yansplace@yahoo.com',
 	  subject: 'New Website Message!',
 	  text: text
 	};
