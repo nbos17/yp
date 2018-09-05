@@ -14,26 +14,73 @@
   <link rel="stylesheet" href="css/variables.css">
   <style>
       /* CSS stylinhg */
+      body {
+      	font-size: 1.125rem;
+      }
       h1 {
           text-align: center;
+          margin-top: 80px;
+          margin-bottom: 40px;
+          font-size: 3rem;
+      }
+      p {
+      	margin-top: 50px;
       }
       span {
           color: red;
       }
       label {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        margin-top: 20px;
       }
+      #submit {
+      	width: 200px;
+      }
+
+      /*MODAL CSS*/
       #modal {
-        border: 5px;
-        border-style: solid;
-        text-align: center;
-        margin: 30px;
+      	position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        width: 355px;
+		margin: 10px;
         display: none;
       }
+      .card {
+      	margin-top: 10px;
+      	max-width: 350px;
+      	height: 300px;
+      	text-align: center;
+      	border-color: blue;
+      }
+      #ok {
+      	width: 150px;
+      	margin-left:100px;
+      	height: 50px;
+      }
+      h2 {
+      	margin-top: 40px;
+      	font-size: 3rem;
+      	color: grey;
+
+      }
+      h3 {
+      	margin-top: 10px;
+      	font-size: 1.125rem;
+      	margin-bottom: 50px;
+      	color: grey;
+      }
+
+      /*MOBILE CSS*/
       @media screen and (max-width: 400px) {
         .form-control {
           max-width: 100%;
         }
+        #submit {
+        	width: 100%;
+        }
+
 
       }
       /* end css stling */
@@ -46,6 +93,7 @@
 	})();
 	</script>
 </head>
+<!-- HTML BEGIN -->
 <body class="contact-us">
   
 <header>
@@ -82,10 +130,20 @@
   <img class="hamburger" src="images/menu.3.white.png">
 </section>
 
-    <main class="width-medium center section">
+
+    <div id="modal">
+        <div class="card">
+        	<h2>Thank You.</h2>
+        	<h3>We have received your message.</h3>
+        	<button id="ok"><a href="index.html">OK</a></button>
+         </div>
+    </div>
+
+
         <h1>Contact Form</h1>
-        <br>
+
     
+    <div class="container">
         <form id="contact-form">
             <div class="form-group">
               <label for="exampleFormControlInput1">First Name <span> *</span></label>
@@ -107,36 +165,30 @@
                 </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Comments<span> *</span></label>
-              <textarea class="form-control" id="comments" rows="3"></textarea>
+              <textarea class="form-control" id="comments" rows="7"></textarea>
             </div>
             <button id="submit" type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
- 
-    </main>
-
-    <div class="container">
-        <div class="row" id="modal">
-              <h2>Your message has been submitted! Thanks!</h2>
-            </div>
-      </div>
+ 	</div>
 
 
-  
-<footer>
-  <!-- You can align the text in the footer using "left", "right", or "center" -->
-  <section class="center width-wide right">
-    <p>Copyright 2018 - Yan's Place * Minnesota</p>
-  </section>
-</footer>
+	<footer>
+	  <!-- You can align the text in the footer using "left", "right", or "center" -->
+	    <p>Copyright 2018 - Yan's Place * Minnesota</p>
+
+	</footer>
+
 <script type="text/javascript" src="js/yans.js"></script>
 <script>
+	//SUBMIT FORM
   $('#submit').on('click', function(e) {
 
 
 
 
     e.preventDefault();
-    $('main').css('display', 'none');
+    $('#contact-form').css('display', 'none');
+    $('h1').css('display', 'none');
     $('#modal').css('display', 'block');
 
     var firstName = $('#FirstName').val();
@@ -146,25 +198,26 @@
     var comment = $('textarea').val();
     console.log(firstName, lastName, emailAddress, number, comment);
 
-	var template_params = {
-	   "name": firstName + " " + lastName,
-	   "email": emailAddress,
-	   "number": number,
-	   "notes": comment
-	}
+	// var template_params = {
+	//    "name": firstName + " " + lastName,
+	//    "email": emailAddress,
+	//    "number": number,
+	//    "notes": comment
+	// }
 
-	var service_id = "default_service";
-	var template_id = "template_U5PSqKa4";
-	emailjs.send(service_id,template_id,template_params)
-	    .then(function(response) {
-	       console.log('SUCCESS!', response.status, response.text);
-	    }, function(error) {
-	       console.log('FAILED...', error);
-	    });
+	// var service_id = "default_service";
+	// var template_id = "template_U5PSqKa4";
+	// emailjs.send(service_id,template_id,template_params)
+	//     .then(function(response) {
+	//        console.log('SUCCESS!', response.status, response.text);
+	//     }, function(error) {
+	//        console.log('FAILED...', error);
+	//     });
 
 
 
 });
+
 
 
 

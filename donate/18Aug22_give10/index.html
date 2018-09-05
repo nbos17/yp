@@ -1,0 +1,175 @@
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="yansplace.css"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+crossorigin="anonymous"></script>
+
+<style>
+	/*CSS STYLING*/
+	input {
+		margin-left: 0px;
+	}
+	.amount {
+		width: 100px;
+		height: 40px;
+		margin: 3px;
+	}
+	span {
+		font-size: 1rem;
+		margin-right: 15px;
+		margin-bottom: 5px;
+	}
+	#donateNow {
+		margin-bottom: 20px;
+	}
+	#otherAmount {
+		width: 157px;
+		height: 40px;
+		margin-top: 3px;
+		border-radius: 0px;
+		border-left: none;
+	}
+	.symbol {
+		height: 40px;
+		width: 50px;
+		margin-top: 3px;
+		margin-left: 3px;
+	}
+	/*END STYLING*/
+</style>
+
+<title>Donate</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">Test</div>
+			<div class="col-md-6">
+				<div class="row">
+					<h1 id="donateNow">Donate Now</h1>
+				</div>
+				<div class="row">
+					<input type="radio" name='donationType' value="oneTime" id="oneTime"><span>ONE TIME</span>
+					<input type="radio" name='donationType' value="monthly" id="monthly"><span>MONTHLY</span>
+				</div>
+				<div class="row">
+					<button class="amount" value="50"><span id="50">$50</span></button>
+					<button class="amount" value="50"><span id="25">$25</span></button>
+					<button class="amount" value="50"><span id="10">$10</span></button>
+				</div>
+				<div class="row">
+						<button class="amount" value="50"><span id="5">$5</span></button>
+						<button class="symbol">$</button>
+						<input type="text" id="otherAmount" class="form-control" placeholder="other amount">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="wrapper">
+		<div id="inner-wrapper">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<div id="left-column">
+				<p class="item_text_desc">Here at Yan's Place our mission is to create innovative products that make technology more accessible and convenient to consumers. 
+
+				Your donation will support the start-up costs and tooling for our exciting new Ngok Stand Case, your ideal mobile companion! </p> 
+
+				<p>Please give and support this extraordinary project today!</p>
+
+				<input type="hidden" name="cmd" value="_donations">
+				<fieldset>
+					<p>I'd like my donation to go towards:</p>
+					<input type="radio" name="item_name" value="General Donations">General Donations<br>
+					<input type="radio" name="item_name" value="Start-up Costs">Start-up Costs
+				</fieldset>
+			</div>
+		
+			<div id="right-column">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				
+
+				<div class="donation-form">
+					<fieldset>
+<!-- 						<p class="donation_amount">Donate Now</p>
+						<input type="radio" value="1">ONE TIME<br>
+						<input type="radio" value="2">MONTHLY<br>
+
+						<button class="amount" value="50"><span>$50</span></button>
+						<button class="amount" value="25"><span>$25</span></button>
+						<button class="amount" value="10"><span>$10</span></button>
+						<button class="amount" value="3"><span>$3</span></button>
+						 <div class="col-auto">
+					      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+					      <div class="input-group mb-2">
+					        <div class="input-group-prepend">
+					          <div class="input-group-text">$</div>
+					        </div>
+					        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Other Amount">
+					      </div>
+					    </div> -->
+<!-- 						<input type="button" name="amount" value="100"><br>
+						<input type="button" name="amount" value="75"><br>
+						<input type="button" name="amount" value="50"><br>
+						<input type="button" name="amount" value="25"><br>
+						<input type="button" name="amount" value=amount><span class="other-amount">Other</span><br> -->
+<!-- 						<input type="text" class="input-text" placeholder="$" size="5" name="amount"><span class="small-text">(Minimum $10)</span> -->
+
+					</fieldset>
+					<input type="hidden" name="business" value="shop@yansplace.com">
+					
+					<input type="button" class="pay_image" border="0" name="submit" value="Donate Now">
+
+				
+						
+					<div class="credit_cards">
+						<img src="images/pp-credit-cards.png">
+					</div>
+
+
+
+
+				</div>
+
+
+
+			</div>
+			</form>
+			<div id="footer">
+				<div>
+				<p><span class="small-text non-profit">Yan's Place Foundation  is a 501(c)3 non-profit organization<br>EIN 30-1075418</span></p>
+				<div class="modal-social-media">
+			        <a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
+			        <a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
+			        <div>
+			        	<a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png"></a>
+			        </div>
+			    </div>
+			    <p class="clearfixer"></p>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+
+	$('#monthly').on('click', function() {
+		$('#50').html('$20');
+		$('#25').html('$10');
+		$('#10').html('$5');
+		$('#5').html('$2');
+	});
+
+	$('#oneTime').on('click', function() {
+		$('#50').html('$50');
+		$('#25').html('$25');
+		$('#10').html('$10');
+		$('#5').html('$5');
+	});
+
+
+	</script>
+</html>
