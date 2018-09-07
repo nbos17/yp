@@ -1,0 +1,208 @@
+body {
+	background-image: url('images/clouds-med.png');
+	background-attachment: fixed;    /* This line keeps the background fixed. Content rolls over it. */
+	background-size: 100% 200%;
+	font-size: 20px;
+	line-height: 24px;
+	}
+	
+#wrapper {
+    margin: -20px auto; /* use if centering horizontally  */
+    width:1100px;
+    position: relative;
+	height: 1100px; /* Adjust this to change the height of the transparent background */
+    z-index: 0;
+}
+	
+#white_background {
+    margin: -20px auto; /* use if centering horizontally  */
+    width:1100px;
+    position: relative;
+	height: 1100px;  /* Should be same height as wrapper */
+    z-index: 10;
+    border: none;
+    background-color: white;
+	opacity: .3; /* was .6 */
+	}
+		
+#product_window_outside {
+	border: 0px solid blue;
+	position: absolute;
+		top: 96px;
+		  /* Adjusting this number will effect the centering of the main window = current centering 
+						  is 25px, but this might be different if other things change.   */
+    width:1100px;
+    z-index: 30;
+	padding: 0px 0px 0px 0px;
+    min-height:550px;
+	font-family: arial, san-serif;
+	margin: 0px auto;
+	color: #003366;
+}
+    
+#left_column {
+	width: 50%;
+	float: left;
+	border: 0px solid blue;  /* ???  */
+	padding: 50px 0px 50px 0px;
+	margin-left: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px black;
+	}
+
+#right_column {
+	width: 50%;
+	float: left;
+	border: 0px solid blue;  /* ???  */
+	padding: 50px 0px 50px 0px;
+	margin-left: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px black;
+	}
+
+	
+.frame img {
+	width: 850px;
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+	
+.frame {
+    border-radius: 5px;
+    box-shadow: 0 0 15px black;
+	margin-bottom: 40px;
+	width: 950px;
+	margin-left: 75px;
+}
+
+#left_box {
+	margin: 0px 100px 100px;
+	padding: 0px;
+	position: relative;
+}
+
+p {
+	margin-bottom: 2px;
+}
+
+.funds {
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+}
+
+.small_box {
+	margin-top: 18px;
+	border: 0px solid blue;
+}
+
+.large_number {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border: 0px solid orange;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: 900;
+	color: black;
+	font-size: 30px;
+	color: #CC6600;	
+}
+
+.small_text {
+	margin-top: 16px;
+	margin-bottom: 0px;
+	border: 0px solid red;
+	font-family: Verdana, Geneva, sans-serif;
+	color: black;
+	font-size: 14px;	
+}
+
+.smaller_text {
+	font-size: 11px;
+	padding-left: 10px;
+	font-style: italic;
+}
+
+.item_text_title {
+   font-family: arial, sans;
+   font-size: 20px;
+   font-weight: 700;
+   color: #CC6600;
+}
+
+.item_text_desc {
+   font-family: arial, san-serif;
+   margin-bottom: 30px;
+}
+
+.donate_sub_title {
+   font-family: arial, sans;
+   text-align: justify;
+   line-height: 20px;
+   margin-bottom: 20px;
+}
+
+    
+.clear {
+    clear:both;
+    }
+	
+td {
+	border: 0px solid teal;
+	padding-left: 5px;
+
+}
+ 
+ fieldset {
+	border: none;
+}
+
+.other_amount {
+	margin-left: 20px;
+	margin-left: 0px;
+}
+
+.donation_amount {
+	margin-bottom: 10px;
+}
+
+.pay_image {
+	width: 155px;
+	margin-left: 20px;
+	margin-top: 0px;
+	}
+	
+.credit_cards img {
+	float: right;
+	width: 230px;
+	margin-top: -50px;
+	margin-right: 75px;
+}
+
+.donation-form {
+	margin-bottom: 10px;
+}
+	
+fieldset {
+	line-height: 26px;
+	margin-left: 20px;
+}
+
+fieldset p {
+	margin-left: -20px;
+}
+
+.fine-print {
+	margin-left: 0px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.other-amount {
+	margin-left: 10px;
+}
+
+
+ 
