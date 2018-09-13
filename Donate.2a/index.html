@@ -1,0 +1,435 @@
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="yansplace.css"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+crossorigin="anonymous"></script>
+
+<style>
+	/*CSS STYLING*/
+	.container {
+		border-radius: 5px;
+	    box-shadow: 0 0 15px black;
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 100px;
+	    border: 1px solid grey;
+	    clear: both;
+	}
+	.row {
+		margin: 0;
+	}
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	textarea {
+		margin-left: 0px;
+	}
+	.amount {
+		width: 30%;
+		height: 40px;
+		margin: 4px;
+	}
+	span {
+		margin-right: 15px;
+		margin-bottom: 5px;
+	}
+	#number{
+		font-size: 1rem;
+	}
+	#donateNow {
+		margin-bottom: 20px;
+	}
+	#otherAmount {
+		width: 264px;
+		height: 40px;
+		margin-top: 3px;
+		border-radius: 0px;
+		border-left: none;
+		font-size: 1.2rem;
+	}
+	.symbol {
+		height: 40px;
+		width: 50px;
+		margin-top: 3px;
+		margin-left: 3px;
+	}
+	.payment {
+		width: 45%;
+		margin-right: 25px;
+		height: 100px;
+		background-color: lightblue;
+		display: block;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+	#creditCards {
+		width: 150px;
+		height: 30px;
+		margin-left: 35px;
+	}
+	#paypal {
+		width: 80px;
+		height: 60px;
+		margin-top: 0px;
+		margin-left: 65px;
+	}
+	#donateButtonText {
+		margin-left: 65px;
+		margin-right: 50px;
+		color: white;
+		font-weight: bolder;
+		position: relative;
+		bottom: 10px;
+	}
+	#donateButtonText2 {
+		margin-left: 65px;
+		margin-right: 50px;
+		color: white;
+		font-weight: bolder;
+		position: relative;
+		top: 5px;
+	}
+	#wrapper {
+		width: 1200px;
+		margin-bottom: 30px;
+	}
+	#paymentInfo {
+		font-size: .75rem;
+		margin-right: 20px;
+		line-height: initial;
+		margin-bottom: 20px;
+
+	}
+	.item_text_desc {
+		margin-bottom: 50px;
+		margin-top: 50px;
+		margin-left: 30px;
+		line-height: 1.5;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+	#line {
+		border-right: solid;
+		border-width: 2px;
+		border-color: grey;
+		margin-top: 75px;
+		margin-bottom: 75px;
+		padding-left: 30px;
+	}
+	#filler {
+		height: 150px;
+	}
+	.selected {
+		background-color: lightblue;
+	}
+	#minimumMobile {
+		display: none;
+	}
+	#minimum {
+		display: block;
+		margin-top: 0;
+		margin-left: 190px;
+		margin-top: 15px;
+		font-size: 1rem;
+	}
+	#mobileHeader {
+		display: none;
+	}
+	input {
+		margin-left: 5px;
+	}
+	.radial {
+		font-size: 1rem;
+	}
+
+	/*MOBILE*/
+	@media screen and (max-width: 400px) {
+		.container {
+			margin-top: 0px;
+			box-shadow: none;
+			border: none;
+		}
+		#wrapper {
+			width: 100%;
+		}
+		#minimum {
+			display: none;
+		}
+		#minimumMobile {
+			display: block;
+			margin-top: 0px;
+			margin-left: 130px;
+			color: grey;
+		}
+		#line {
+			border-color: white;
+			margin-top: 25px;
+		}
+		.symbol {
+			width: 25px;
+		}
+		#otherAmount {
+			width: 150px;
+		}
+		.payment {
+			width: 45%;
+			margin-right: 5px;
+			margin-bottom: 20px;
+		}
+		#filler {
+			display: none;
+		}
+		.row {
+			margin-left: 0px;
+		}
+		.item_text_desc {
+			margin-top: 0px;
+			margin-right: 50px;
+			font-size: 1.25rem;
+			margin-bottom: 0px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		#donateButtonText {
+			margin-left: 15px;
+		}
+		#creditCards {
+			width: 100px;
+			margin-left: 5px;
+		}
+		#donateButtonText2 {
+			margin-left:15px;
+		}
+		#paypal {
+			margin-left: 15px;
+		}
+		#mobileHeader {
+			display: block;
+			background-color: 	#f0f0f5;
+			/*border: 1px solid black;*/
+			border-left: none;
+		}
+		#mobileNoShow {
+			display: none;
+		}
+		input {
+			margin-left: 5px;
+		}
+		#footer {
+			margin: 0px;
+		}
+		span {
+			margin-left: 10px;
+		}
+		#footerSpan {
+			margin: 0px;
+		}
+
+	}
+
+	/*END STYLING*/
+</style>
+
+<title>Donate</title>
+</head>
+<body>
+
+<!-- <div id="wrapper"> -->
+		<div class="row" id="mobileHeader">
+			<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6" id="line">
+					<div class="row">
+						<h1 id="donateNow">Enter Your Gift Amount</h1>
+					</div>
+					<div class="row">
+						<input type="radio" name='donationType' value="oneTime" id="oneTime"><span class="radial">ONE TIME</span>
+						<input type="radio" name='donationType' value="monthly" id="monthly"><span class="radial">MONTHLY</span>
+					</div>
+					<div class="row">
+						<button class="amount" value="50"><span class="number">$50</span></button>
+						<button class="amount" value="25"><span class="number">$25</span></button>
+						<button class="amount" value="10"><span class="number">$10</span></button>
+					</div>
+					<div class="row">
+						<button class="amount" value="5"><span class="number">$5</span></button>
+						<button class="symbol">$</button>
+						<textarea type="text" rows='1' id="otherAmount" class="form-control" value='#' placeholder="other amount"></textarea>
+						<p id='minimum'>Minimum donation for a one-time gift - $10</p>
+						<p id='minimumMobile'>(Minimum $10)</p>
+
+					</div>
+					<div class="row">
+						<h2>Payment Method</h2>
+					</div>
+					<div class="row">
+						<button class="payment">
+							<div class="row">
+								<span id='donateButtonText'>DONATE</span>
+							</div>
+							<div class='row'>
+								<img id="creditCards" src="images/pp-credit-cards.png" alt="Credit Card Payment">
+							</div>
+						</button>
+						<button class="payment">
+							<div class="row">
+								<span id='donateButtonText2'>DONATE</span>
+							</div>
+							<div class="row">
+								<!-- PayPal Logo --><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" 
+								onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img id='paypal' src="images/paypal_logo.png" border="0" alt="PayPal Logo"></a>
+							</div>
+							<!-- PayPal Logo -->
+						</button>
+
+<!-- 							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_donations">
+								<input type="hidden" name="business" value="shop@yansplace.com">
+								<input type="hidden" name="currency_code" value="USD">
+								<input type="hidden" id='donationAmount' name="amount" value="25.00">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+							</form> -->
+
+					</div>
+					<div class="row" id="paymentInfo">
+						<br>
+						<p>Your payment details will be processed by Paypal, and a record of your donations will be stored by Yan's Place.</p>
+
+						<p>Problems donating? <a href='yansplace.com/contact.html'>Contact Me</a>. </p>
+
+						<p>Contributions will be used in its discretion for its chartibale purposes. They are tax deductible in the U.S. to the fullest extent permitted by law. Contributions go to Yan's Place, a 501(c)(3) organization based out of Minnesota.</p>
+					</div>
+				</div>
+
+
+				<div class="col-md-6" id="mobileNoShow">
+					<div class="row" id="filler"></div>
+					<div class="row">
+						<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
+					</div>
+					<div class="row">
+						<div id="footer">
+							<div>
+							<p><span id="footerSpan" class="small-text non-profit">Yan's Place Foundation  is a 501(c)3 non-profit organization<br>EIN 30-1075418</span></p>
+							<div class="modal-social-media">
+							<a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
+							<a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
+							<div>
+							<a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png"></a>
+							</div>
+							</div>
+							<p class="clearfixer"></p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+
+			</div>
+		</div>
+<!-- </div> -->
+
+
+<!-- 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				
+
+				<div class="donation-form">
+					<fieldset> -->
+<!-- 						<p class="donation_amount">Donate Now</p>
+						<input type="radio" value="1">ONE TIME<br>
+						<input type="radio" value="2">MONTHLY<br>
+
+						<button class="amount" value="50"><span>$50</span></button>
+						<button class="amount" value="25"><span>$25</span></button>
+						<button class="amount" value="10"><span>$10</span></button>
+						<button class="amount" value="3"><span>$3</span></button>
+						 <div class="col-auto">
+					      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+					      <div class="input-group mb-2">
+					        <div class="input-group-prepend">
+					          <div class="input-group-text">$</div>
+					        </div>
+					        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Other Amount">
+					      </div>
+					    </div> -->
+<!-- 						<input type="button" name="amount" value="100"><br>
+						<input type="button" name="amount" value="75"><br>
+						<input type="button" name="amount" value="50"><br>
+						<input type="button" name="amount" value="25"><br>
+						<input type="button" name="amount" value=amount><span class="other-amount">Other</span><br> -->
+<!-- 						<input type="text" class="input-text" placeholder="$" size="5" name="amount"><span class="small-text">(Minimum $10)</span> -->
+
+<!-- 					</fieldset>
+					<input type="hidden" name="business" value="shop@yansplace.com">
+					
+					<input type="button" class="pay_image" border="0" name="submit" value="Donate Now">
+
+				
+						
+					<div class="credit_cards">
+						<img src="images/pp-credit-cards.png">
+					</div> -->
+
+
+</body>
+<script>
+	var amount = 0;
+	$('.amount').on('click', function() {
+		$('.amount').removeClass('selected');
+		amount = $(this).val();
+		$('#donationAmount').val(amount);
+		console.log(amount);
+		$(this).toggleClass('selected');
+	});
+
+
+	//DONATE BUTTON CLICK EVENT
+	$('.payment').on('click', function() {
+		var otherValue;
+		var otherAmount = parseInt(otherValue);
+		otherAmount = $('textarea').val();
+
+		console.log(otherAmount);
+		if (otherAmount >= 10) {
+			window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=shop@yansplace.com&amount=' + otherAmount + '&currency_code=USD', 'popup', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700');
+		}
+		else if (amount == 0) {
+			console.log('Please select amount');
+			alert('Please enter a donation amount');
+		}
+		else {
+		window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=shop@yansplace.com&amount=' + amount + '&currency_code=USD', 'popup', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700');
+		}
+	});
+
+	//ONE TIME AND MONTHLY PAYMENT SWITCH
+	$('#monthly').on('click', function() {
+		$('#50').html('$20');
+		$('#25').html('$10');
+		$('#10').html('$5');
+		$('#5').html('$2');
+	});
+
+	$('#oneTime').on('click', function() {
+		$('#50').html('$50');
+		$('#25').html('$25');
+		$('#10').html('$10');
+		$('#5').html('$5');
+	});
+
+
+
+	</script>
+</html>
