@@ -47,7 +47,7 @@ crossorigin="anonymous"></script>
 		margin-bottom: 20px;
 	}
 	#otherAmount {
-		width: 264px;
+		width: 52%;
 		height: 40px;
 		margin-top: 3px;
 		border-radius: 0px;
@@ -148,7 +148,14 @@ crossorigin="anonymous"></script>
 	.radial {
 		font-size: 1rem;
 	}
-
+	@media screen and (max-width: 1200px) {
+		#otherAmount {
+			width: 50%;
+		}
+		.payment {
+			margin-right: 20px;
+		}
+	}
 	/*MOBILE*/
 	@media screen and (max-width: 400px) {
 		.container {
