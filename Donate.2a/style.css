@@ -1,4 +1,16 @@
 	/*CSS STYLING*/
+
+	.col-md-6 {
+		padding-right: 40px;
+		padding-left:	20px;
+	}
+	.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5,.col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	.col-4, .col-8 {
+		padding-right: 7px;
+	}
 	.container {
 		border-radius: 5px;
 	    box-shadow: 0 0 15px black;
@@ -12,6 +24,9 @@
 	.row {
 		margin: 0;
 	}
+	span.radial {
+		margin-right: 20px;
+	}
 	h2 {
 		font-size: 1.5rem;
 		margin-top: 20px;
@@ -20,14 +35,18 @@
 	textarea {
 		margin-left: 0px;
 	}
-	.amount {
-		width: 30%;
-		height: 40px;
-		margin: 4px;
+	#radial {
+		margin-bottom: 10px;
 	}
-	span {
-		margin-right: 15px;
-		margin-bottom: 5px;
+	.amount {
+		width: 100%;
+		height: 40px;
+		margin-bottom: 10px;
+		background: #f0f0f5;
+		/*margin: 4px;*/
+	}
+	.input-group {
+		height: 40px;
 	}
 	#number{
 		font-size: 1rem;
@@ -35,28 +54,50 @@
 	#donateNow {
 		margin-bottom: 20px;
 	}
+	.input-group-text {
+		background: #f0f0f5;
+	}
+	#otherAmountInput {
+		margin-left: inherit;
+		margin-right:0px;
+		width: 70%;
+	}
 	#otherAmount {
-		width: 52%;
+		width: 200px;
 		height: 40px;
+		border-color: lightgrey;
 		margin-top: 3px;
+		margin-right: 0px;
 		border-radius: 0px;
 		border-left: none;
 		font-size: 1.2rem;
+		resize: none;
+		overflow: hidden;
+		display: inline;
+		padding: 5px;
 	}
 	.symbol {
 		height: 40px;
 		width: 50px;
-		margin-top: 3px;
-		margin-left: 3px;
+		background: grey;
+		display: inline;
 	}
 	.payment {
-		width: 45%;
-		margin-right: 25px;
+		width: 100%;
+/*		margin-right: 25px;*/
 		height: 100px;
 		background-color: lightblue;
 		display: block;
 		overflow: hidden;
 		border-radius: 5px;
+	}
+	#buttonImage1 {
+		width: 100%;
+		height: 100px;
+	}
+	#buttonImage2 {
+		width: 100%;
+		height: 100px;
 	}
 	#creditCards {
 		width: 150px;
@@ -99,10 +140,13 @@
 	.item_text_desc {
 		margin-bottom: 50px;
 		margin-top: 50px;
-		margin-left: 30px;
+		margin-left: 20px;
 		line-height: 1.5;
 		font-size: 1.5rem;
 		text-align: left;
+	}
+	#footer {
+		margin: 20px;
 	}
 	#line {
 		border-right: solid;
@@ -110,7 +154,6 @@
 		border-color: grey;
 		margin-top: 75px;
 		margin-bottom: 75px;
-		padding-left: 30px;
 	}
 	#filler {
 		height: 150px;
@@ -124,9 +167,10 @@
 	#minimum {
 		display: block;
 		margin-top: 0;
-		margin-left: 190px;
-		margin-top: 15px;
+		/*margin-left: 370px;*/
+		margin-top: 5px;
 		font-size: 1rem;
+		margin-left: 77%;
 	}
 	#mobileHeader {
 		display: none;
@@ -136,6 +180,7 @@
 	}
 	.radial {
 		font-size: 1rem;
+		margin-left: 0;
 	}
 	/*@1200px*/
 	@media screen and (max-width: 1200px) {
@@ -158,12 +203,40 @@
 			margin-left: 60%;
 		}
 	}
+	@media screen and (max-width: 767px) {
+		#filler {
+			display: none;
+		}
+		#line {
+			border-right: none;
+		}
+	}
 	/*MOBILE*/
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 380px) {
+		.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+		span.radial {
+			margin-right: 0px;
+		}
 		.container {
 			margin-top: 0px;
 			box-shadow: none;
 			border: none;
+		}
+		#buttonImage1 {
+			width: 140%;
+			position: relative;
+			right: 30px;
+		}
+		#buttonImage2 {
+			width: 140%;
+			position: relative;
+			right: 30px;
+		}
+		.radial {
+			margin-left: 0;
 		}
 		#wrapper {
 			width: 100%;
@@ -174,8 +247,9 @@
 		#minimumMobile {
 			display: block;
 			margin-top: 0px;
-			margin-left: 130px;
+			margin-left: 65%;
 			color: grey;
+			font-size: 1rem;
 		}
 		#line {
 			border-color: white;
@@ -185,12 +259,12 @@
 			width: 25px;
 		}
 		#otherAmount {
-			width: 150px;
+			width: 55%;
 		}
 		.payment {
-			width: 45%;
-			margin-right: 5px;
-			margin-bottom: 20px;
+			width: 100%;
+/*			margin-right: 5px;
+			margin-bottom: 20px;*/
 		}
 		#filler {
 			display: none;
@@ -207,14 +281,14 @@
 			padding-bottom: 20px;
 		}
 		#donateButtonText {
-			margin-left: 15px;
+			margin-left: 20%;
 		}
 		#creditCards {
 			width: 100px;
 			margin-left: 5px;
 		}
 		#donateButtonText2 {
-			margin-left:15px;
+			margin-left:20%;
 		}
 		#paypal {
 			margin-left: 15px;
@@ -242,3 +316,15 @@
 		}
 
 	}
+@media screen and (max-width: 350px) {
+		#buttonImage1 {
+			width: 140%;
+			position: relative;
+			right: 25px;
+		}
+		#buttonImage2 {
+			width: 140%;
+			position: relative;
+			right: 25px;
+		}
+}

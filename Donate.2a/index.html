@@ -17,53 +17,86 @@ crossorigin="anonymous"></script>
 
 <!-- <div id="wrapper"> -->
 		<div class="row" id="mobileHeader">
-			<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
+			<div class="col-12">
+				<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
+			</div>
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6" id="line">
 					<div class="row">
-						<h1 id="donateNow">Enter Your Gift Amount</h1>
+						<div class="col-md-12">
+							<h1 id="donateNow">Enter Your Gift Amount</h1>
+						</div>
+					</div>
+					<div class="row" id="radial">
+						<div class="col-12">
+							<input type="radio" name='donationType' value="oneTime" id="oneTime"><span class="radial">ONE TIME</span>
+							<input type="radio" name='donationType' value="monthly" id="monthly"><span class="radial">MONTHLY</span>
+						</div>
 					</div>
 					<div class="row">
-						<input type="radio" name='donationType' value="oneTime" id="oneTime"><span class="radial">ONE TIME</span>
-						<input type="radio" name='donationType' value="monthly" id="monthly"><span class="radial">MONTHLY</span>
+						<div class="col-4">
+							<button class="amount" value="50">$50</button>
+						</div>
+						<div class="col-4">
+							<button class="amount" value="25">$25</button>
+						</div>
+						<div class="col-4">
+							<button class="amount" value="10">$10</button>
+						</div>
 					</div>
 					<div class="row">
-						<button class="amount" value="50"><span class="number">$50</span></button>
-						<button class="amount" value="25"><span class="number">$25</span></button>
-						<button class="amount" value="10"><span class="number">$10</span></button>
+						<div class="col-4">
+							<button class="amount" value="5">$5</button>
+						</div>
+						<div class="col-8">
+							<div class="input-group mb-2">
+						        <div class="input-group-prepend">
+						          <div class="input-group-text">$</div>
+						        </div>
+						        <input type="text" class="form-control" id="otherAmountInput" placeholder="Other amount">
+						      </div>
+						</div>
 					</div>
 					<div class="row">
-						<button class="amount" value="5"><span class="number">$5</span></button>
-						<button class="symbol">$</button>
-						<textarea type="text" rows='1' id="otherAmount" class="form-control" value='#' placeholder="other amount"></textarea>
-						<p id='minimum'>Minimum donation for a one-time gift - $10</p>
-						<p id='minimumMobile'>(Minimum $10)</p>
+						<div class="col-12">
+							<p id='minimum'>(Minimum $10)</p>
+							<p id='minimumMobile'>(Minimum $10)</p>
+						</div>
 
 					</div>
 					<div class="row">
-						<h2>Payment Method</h2>
+						<div class="col-md-12">
+							<h2>Payment Method</h2>
+						</div>
 					</div>
 					<div class="row">
-						<button class="payment">
-							<div class="row">
+						<div class="col-6">
+							<button class="payment">
+								<img src="credit_card.png" alt="paypal" id='buttonImage1'>
+
+							<!-- <div class="row">
 								<span id='donateButtonText'>DONATE</span>
 							</div>
 							<div class='row'>
 								<img id="creditCards" src="images/pp-credit-cards.png" alt="Credit Card Payment">
-							</div>
-						</button>
-						<button class="payment">
-							<div class="row">
-								<span id='donateButtonText2'>DONATE</span>
-							</div>
-							<div class="row">
-								<!-- PayPal Logo --><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" 
-								onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img id='paypal' src="images/paypal_logo.png" border="0" alt="PayPal Logo"></a>
-							</div>
-							<!-- PayPal Logo -->
-						</button>
+							</div> -->
+							</button>
+						</div>
+						<div class="col-6">
+							<button class="payment">
+								<img src="paypal1.png" alt="paypal" id="buttonImage2">
+								<!-- <div class="row">
+									<span id='donateButtonText2'>DONATE</span>
+								</div>
+								<div class="row"> -->
+									<!-- PayPal Logo --><!-- <a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" 
+									onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img id='paypal' src="images/paypal_logo.png" border="0" alt="PayPal Logo"></a>
+								</div> -->
+								<!-- PayPal Logo -->
+							</button>
+						</div>
 
 <!-- 							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_donations">
@@ -76,33 +109,37 @@ crossorigin="anonymous"></script>
 
 					</div>
 					<div class="row" id="paymentInfo">
-						<br>
-						<p>Your payment details will be processed by Paypal, and a record of your donations will be stored by Yan's Place.</p>
+						<div class="col-md-12">
+							<br>
+							<p>Your payment details will be processed by Paypal, and a record of your donations will be stored by Yan's Place.</p>
 
-						<p>Problems donating? <a href='yansplace.com/contact.html'>Contact Me</a>. </p>
+							<p>Problems donating? <a href='contact.html'>Contact Me</a>. </p>
 
-						<p>Contributions will be used in its discretion for its chartibale purposes. They are tax deductible in the U.S. to the fullest extent permitted by law. Contributions go to Yan's Place, a 501(c)(3) organization based out of Minnesota.</p>
+							<p>Contributions will be used in its discretion for its chartibale purposes. They are tax deductible in the U.S. to the fullest extent permitted by law. Contributions go to Yan's Place, a 501(c)(3) organization based out of Minnesota.</p>
+						</div>
 					</div>
 				</div>
 
 
 				<div class="col-md-6" id="mobileNoShow">
-					<div class="row" id="filler"></div>
-					<div class="row">
-						<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
-					</div>
-					<div class="row">
-						<div id="footer">
-							<div>
-							<p><span id="footerSpan" class="small-text non-profit">Yan's Place Foundation  is a 501(c)3 non-profit organization<br>EIN 30-1075418</span></p>
-							<div class="modal-social-media">
-							<a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
-							<a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
-							<div>
-							<a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png"></a>
-							</div>
-							</div>
-							<p class="clearfixer"></p>
+					<div class="col-md-12">
+						<div class="row" id="filler"></div>
+						<div class="row">
+							<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
+						</div>
+						<div class="row">
+							<div id="footer">
+								<div>
+								<p><span id="footerSpan" class="small-text non-profit">Yan's Place Foundation  is a 501(c)3 non-profit organization<br>EIN 30-1075418</span></p>
+								<div class="modal-social-media">
+								<a class="social-link social-link-last" href="mailto:support@yansplace.com"><img src="images/email.png"></a>
+								<a class="social-link" href=" " target="_blank"><img src="images/twitter.png"></a>  <!-- WAS: http://www.twitter.com/yansplace -->
+								<div>
+								<a class="social-link" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yansplace.com%2Ffund-the-ngok%2F&amp;src=sdkpreparse', 'newwindow', 'width=600, height=650'); return false;" href="#"><img src="images/fb.1.png"></a>
+								</div>
+								</div>
+								<p class="clearfixer"></p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -173,7 +210,8 @@ crossorigin="anonymous"></script>
 	$('.payment').on('click', function() {
 		var otherValue;
 		var otherAmount = parseInt(otherValue);
-		otherAmount = $('textarea').val();
+		console.log(otherAmount);
+		otherAmount = $('#otherAmountInput').val();
 
 		console.log(otherAmount);
 		if (otherAmount >= 10) {
