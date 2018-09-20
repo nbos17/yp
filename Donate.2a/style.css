@@ -210,6 +210,9 @@
 		#line {
 			border-right: none;
 		}
+		.container {
+			margin-top: 0px;
+		}
 	}
 	/*MOBILE*/
 	@media screen and (max-width: 380px) {
