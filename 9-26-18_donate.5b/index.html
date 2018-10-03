@@ -1,0 +1,184 @@
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="yansplace.css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+crossorigin="anonymous"></script>
+
+
+<title>Donate.x</title>
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!-- <div id="wrapper"> -->
+		<div class="row" id="mobileHeader">
+			<div class="col-12">
+				<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6" id="line">
+					<div class="row">
+						<div class="col-md-12">
+							<h1 id="donateNow">Enter Your Gift Amount</h1>
+						</div>
+					</div>
+					<div class="row" id="radial">
+						<div class="col-12">
+							<input type="radio" name='donationType' value="oneTime" id="oneTime"><span class="radial">ONE TIME</span>
+							<input type="radio" name='donationType' value="monthly" id="monthly"><span class="radial">MONTHLY</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<button class="amount" value="50" id='50'>$50</button>
+						</div>
+						<div class="col-4">
+							<button class="amount" value="25" id='25'>$25</button>
+						</div>
+						<div class="col-4">
+							<button class="amount" value="10" id='10'>$10</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<button class="amount" value="5" id='5'>$5</button>
+						</div>
+						<div class="col-8">
+							<div class="input-group mb-2">
+						        <div class="input-group-prepend">
+						          <div class="input-group-text">$</div>
+						        </div>
+						        <input type="text" class="form-control" id="otherAmountInput" placeholder="Other amount">
+						      </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<p id='minimum'>(Minimum $10)</p>
+							<p id='minimumMobile'>(Minimum $10)</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h2>Payment Method</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<button class="payment">
+								<img src="credit_card.png" alt="paypal" id='buttonImage1'>
+
+							</button>
+						</div>
+						<div class="col-6">
+							<button class="payment">
+								<img src="paypal1.png" alt="paypal" id="buttonImage2">
+							</button>
+						</div>
+
+
+					</div>
+					<div class="row" id="paymentInfo">
+						<div class="col-md-12">
+							<br>
+							<p>Your payment details will be processed by Paypal, and a record of your donations will be stored by Yan's Place.</p>
+							<br>
+
+							<p>Problems donating? <a href='contact.html'>Contact Me</a>. </p>
+							<br>
+
+							<p>Part of the profits from Yan's Place will be donated to a charitable organization</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6" id="mobileNoShow">
+					<div class="col-md-12">
+						<div class="row" id="filler"></div>
+						<div class="row">
+							<p class="item_text_desc">Your generous donations will help improve how people communicate with family and friends. Our mission is to make technology more accessible and convenient. We depend on your support to make this possible.</p>
+
+						</div>
+
+					</div>
+
+
+				</div>
+
+
+			</div>
+		</div>
+
+
+</body>
+<script>
+	var amount = 0;
+	$('.amount').on('click', function() {
+		$('.amount').removeClass('selected');
+		amount = $(this).val();
+		$('#donationAmount').val(amount);
+		console.log(amount);
+		$(this).toggleClass('selected');
+	});
+
+	// $('#oneTime').on('click', function() {
+	// 	var bbc = $(this).val();
+	// 	console.log(bbc);
+	// 	$('#50').toggleClass('selected');
+	// 	amount = 50;
+	// });
+	//DONATE BUTTON CLICK EVENT
+	$('.payment').on('click', function() {
+		var otherValue;
+		var otherAmount = parseInt(otherValue);
+		console.log(otherAmount);
+		otherAmount = $('#otherAmountInput').val();
+
+		console.log(otherAmount);
+		if (otherAmount >= 10) {
+			window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=shop@yansplace.com&amount=' + otherAmount + '&currency_code=USD', 'popup', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700');
+		}
+		else if (amount == 0) {
+			console.log('Please select amount');
+			alert('Please enter a donation amount');
+		}
+		else {
+		window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&item_name=Yans Place thanks you for your support&business=shop@yansplace.com&amount=' + amount + '&currency_code=USD', 'popup', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700');
+		}
+	});
+
+	//ONE TIME AND MONTHLY PAYMENT SWITCH
+	$('#monthly').on('click', function() {
+		$('.amount').removeClass('selected');
+		$('#50').html('$20').val(20);
+		$('#25').html('$10').val(10);
+		$('#10').html('$5').val(5);
+		$('#5').html('$2').val(2);
+		$('#50').addClass('selected');
+		amount = 20;
+	});
+
+	$('#oneTime').on('click', function() {
+		$('.amount').removeClass('selected');
+		$('#50').html('$50').val(50);
+		$('#25').html('$25').val(25);
+		$('#10').html('$10').val(10);
+		$('#5').html('$5').val(5);
+		$('#50').addClass('selected');
+		amount = 50;
+	});
+
+
+
+	</script>
+</html>

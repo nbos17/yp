@@ -1,0 +1,185 @@
+<html class="contact-page">
+<head>
+  <title></title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/yan.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <style>
+      /* CSS stylinhg */
+      body {
+      	font-size: 1.125rem;
+      }
+      h1 {
+          text-align: center;
+          margin-top: 80px;
+          margin-bottom: 40px;
+          font-size: 3rem;
+      }
+      p {
+      	margin-top: 50px;
+      }
+      span {
+          color: red;
+      }
+      label {
+        margin-bottom: 5px;
+        margin-top: 20px;
+      }
+      #submit {
+      	width: 200px;
+      }
+
+      /*MODAL CSS*/
+      #modal {
+      	position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        width: 355px;
+		    margin: 10px;
+        display: none;
+      }
+      .card {
+      	margin-top: 10px;
+      	max-width: 350px;
+      	height: 300px;
+      	text-align: center;
+      	border-color: blue;
+      }
+      #ok {
+      	width: 150px;
+      	/*margin-left:100px;*/
+      	height: 50px;
+      }
+      h2 {
+      	margin-top: 40px;
+      	font-size: 3rem;
+      	color: grey;
+
+      }
+      h3 {
+      	margin-top: 10px;
+      	font-size: 1.125rem;
+      	margin-bottom: 50px;
+      	color: grey;
+      }
+
+      /*MOBILE CSS*/
+      @media screen and (max-width: 400px) {
+        .form-control {
+          max-width: 100%;
+        }
+        #submit {
+        	width: 100%;
+        }
+
+
+      }
+      /* end css stling */
+  </style>
+  	<!-- send email script -->
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+	<script type="text/javascript">
+	(function(){
+	   emailjs.init("user_bCyp6xGsYp4QJbrA4DLGX");
+	})();
+	</script>
+</head>
+<!-- HTML BEGIN -->
+<body class="contact-us">
+  
+    <div id="modal">
+        <div class="card">
+        	<h2>Thank You.</h2>
+        	<h3>We have received your message.</h3>
+        	<a href="index.html"><button id="ok">OK</button></a>
+         </div>
+    </div>
+
+        <h1>Contact Form</h1>
+    
+    <div class="container">
+        <form id="contact-form">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">First Name <span> *</span></label>
+              <input type="text" class="form-control" id="FirstName" placeholder="">
+            </div>
+            <div class="form-group">
+                    <label for="exampleFormControlInput1">Last Name<span> *</span></label>
+                    <input type="text" class="form-control" id="lastName" placeholder="">
+            </div>
+            <div class="form-group">
+                    <label for="exampleFormControlInput1">Email Address<span> *</span></label>
+                    <input type="text" class="form-control" id="emailAddress" placeholder="">
+                  </div>
+            <div class="form-group">
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Telephone Number</label>
+                    <input type="text" class="form-control" id="number" placeholder="">
+                </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Comments<span> *</span></label>
+              <textarea class="form-control" id="comments" rows="7"></textarea>
+            </div>
+            <button id="submit" type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+ 	</div>
+
+
+<script type="text/javascript" src="js/yans.js"></script>
+<script>
+	//SUBMIT FORM
+  $('#submit').on('click', function(e) {
+
+
+
+
+    e.preventDefault();
+    $('#contact-form').css('display', 'none');
+    $('h1').css('display', 'none');
+    $('#modal').css('display', 'block');
+
+    var firstName = $('#FirstName').val();
+    var lastName = $('#lastName').val();
+    var emailAddress = $('#emailAddress').val();
+    var number = $('#number').val();
+    var comment = $('textarea').val();
+    console.log(firstName, lastName, emailAddress, number, comment);
+
+  	var template_params = {
+  	   "name": firstName + " " + lastName,
+  	   "email": emailAddress,
+  	   "number": number,
+  	   "notes": comment
+  	}
+
+  	var service_id = "default_service";
+  	var template_id = "template_U5PSqKa4";
+  	emailjs.send(service_id,template_id,template_params)
+  	    .then(function(response) {
+  	       console.log('SUCCESS!', response.status, response.text);
+  	    }, function(error) {
+  	       console.log('FAILED...', error);
+  	    });
+
+
+
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>

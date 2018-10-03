@@ -1,0 +1,193 @@
+
+// Reset
+
+body, div {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: arial, san-serif;
+	color: #003366;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+#wrapper {
+
+	width: 1100px;
+	border-radius: 5px;
+    box-shadow: 0 0 15px black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border: 1px solid grey;
+    clear: both;
+}
+
+fieldset {
+	border: none;
+}
+
+#left-column {
+	width: 50%;
+	float: left;
+	margin: 0% 3% 5% 5%;
+}
+
+#right-column {
+	width: 30%;
+	float: right;
+	margin: 0% 5% 5% 3%;
+}
+
+.small-text {
+	font-size: 16px;
+}
+
+
+input {
+	margin-right: 13px;
+	margin-left: 20px;
+}
+
+/*Pay logos*/
+
+.donation_amount {
+	margin-bottom: 10px;
+	font-weight: 900;
+}
+
+.pay_image {
+	width: 170px;
+	margin-left: 20px;
+	margin-top: 0px;
+	}
+	
+.credit_cards img {
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 230px;
+
+
+}
+
+.input-text {
+	margin-left: 40px;
+	margin-top: 10px;
+	font-size: 26px;
+}
+
+input.pay_image {
+	background-color: #7ABEE4;
+	color: white;
+	height: 30px;;
+	border-radius: 10px;
+	font-size: 18px;
+	width: 230px;
+}
+
+@media only screen and (max-width: 1100px) {
+	#wrapper {
+		width: 100%;
+	}
+}
+/*@media only screen and (max-width: 800px) {
+
+	body {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	#wrapper {
+    	box-shadow: none;
+    	border: none;
+    	margin-top: 10px;
+	}
+
+	#left-column {
+		width: 90%;
+		float: left;
+		margin: 0% 3% 5% 5%;
+	}
+
+	#right-column {
+		width: 90%;
+		float: left;
+		margin: 0% 5% 5% 3%;
+	}
+
+	.donation-form {
+		background-color: #7ABEE4;
+		padding: 10px 10px 40px;
+		border-radius: 5px;
+		margin-bottom: 50px;
+	}
+
+	.donation-form input {
+		font-size: 18px;
+	}
+
+	.donation_amount {
+		font-size: 20px;
+	}
+
+	.modal-social-media {
+		margin: 60px 0px;
+	}
+
+	input.pay_image {
+		background-color: white;
+		color: #7ABEE4;
+		height: 30px;;
+		border-radius: 10px;
+		font-size: 18px;
+	}
+
+}*/
+
+/* Social Media Links */
+
+a.social-link img {
+    width: 30px;
+}
+
+.social-link {
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.social-link-last {
+    margin-right: 10px;
+}
+
+.copy-paste {
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.non-profit {
+	color: grey;
+}
+
+.modal-social-media {
+	clear: both;
+	height: 5px;
+}
+
+#footer {	
+	margin: 5%;
+	width: 100%;
+	clear: both;
+}
+
+.clearfixer {
+	height: 1px;
+}
+
+input.pay_image:hover {
+	border: 2px solid black;
+}
