@@ -1,0 +1,87 @@
+#header {
+	height: 75px;
+	background-color: lightgrey;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.item {
+	background-color: white;
+	height: 300px;
+	width: 100%;
+}
+.row {
+	margin: 5px;
+	margin-bottom: 15px;
+}
+h1 {
+	margin-top: 15px;
+	font-size: 2rem;
+	text-align: center;
+}
+img {
+	width: 100%;
+	background-color: grey;
+	height: 255px;
+}
+.col-sm-3 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.price {
+	font-size: 1.2rem;
+}
+.description {
+	font-size: 1.2rem;
+}
+.footerIcons {
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	display: inline;
+}
+#footer {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	margin: 0 auto;
+
+}
+#footerRow {
+	margin-top: 70px;
+	border-top-style: dashed;
+	border-top-width: 1px;
+	border-top-color: black;
+}
+@media screen and (max-width: 1199px) {
+	img {
+		height: 210px;
+	}
+	.item {
+		height: 260px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	img {
+		height: 150px;
+	}
+	.item {
+		height: 220px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.col-sm-3 {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+	img {
+		height: 145px;
+	}
+	.item {
+		height: 190px;
+	}
+	.row {
+		margin-bottom: 0px;
+	}
+}
