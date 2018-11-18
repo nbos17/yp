@@ -1,0 +1,204 @@
+#header {
+	height: 75px;
+	background-color: lightgrey;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.item {
+	background-color: white;
+	height: 300px;
+	width: 100%;
+}
+.row {
+	margin: 5px;
+	margin-bottom: 15px;
+}
+h1 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 2.5rem;
+	text-align: left;
+}
+img {
+	width: 100%;
+	height: 255px;
+}
+h2 {
+	text-align: left;
+	font-size: 1.5rem;
+}
+.col-sm-3 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.price {
+	font-size: 1.2rem;
+}
+.description {
+	font-size: 1.2rem;
+}
+.footerIcons {
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	display: inline;
+}
+#footer {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	margin: 0 auto;
+
+}
+#footerRow {
+	margin-top: 70px;
+	border-top-style: dashed;
+	border-top-width: 1px;
+	border-top-color: black;
+}
+/*Modal Popup*/
+#modalPopup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 50;
+	background-color: rgba(20, 20, 20, 0.5);
+	width: 95%;
+	height: 850px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#modalImage {
+/*	border-style: solid;
+	border-width: 5px;
+	border-color: black;*/
+	width: 100%;
+	height: 800px;
+}
+#close {
+	position: relative;
+	float: right;
+	background-color: white;
+	right: -15px;
+	top: -20px;
+	font-size: 1.25rem;
+}
+#itemDescriptionInfo {
+	margin-top: 20px;
+	display: flow-root;
+	align-items: left;
+	text-align: left;
+}
+#modalHeader {
+	margin-bottom: 10px;
+	font-size: 2rem;
+}
+#buy {
+	margin-top: 10px;
+	width: 300px;
+	height: 50px;
+}
+.dropdown-toggle {
+	width: 300px;
+	height: 40px;
+	background-color: white;
+	color: black;
+}
+#size {
+	margin-top: 20px;
+}
+.dropdown-item {
+	width: 300px;
+}
+#question {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 150px;
+	height: 40px;
+}
+#buttonClose {
+	display: none;
+	width: 100%;
+	height: 50px;
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 1199px) {
+	img {
+		height: 210px;
+	}
+	.item {
+		height: 260px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	img {
+		height: 150px;
+	}
+	.item {
+		height: 220px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.col-sm-3 {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+	img {
+		height: 145px;
+	}
+	.item {
+		height: 190px;
+	}
+	.row {
+		margin-bottom: 0px;
+	}
+	#modalImage {
+		height: 200px;
+	}
+	#close {
+		display: none;
+	}
+	#buttonClose {
+		display: block;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	.dropdown-toggle {
+		width: 100%;
+	}
+	.dropdown-item {
+		width: 100%;
+	}
+	#buy {
+		width: 100%;
+		font-size: 1.5rem;
+	}
+	#modalPopup {
+		width: 100%;
+		padding-bottom: 60px;
+		overflow-y: scroll;
+		height: 630px;
+		top: 0;
+		left: 0;
+		transform: translate(0);
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	.description {
+		font-size: 1rem;
+	}
+	.price {
+		font-size: 1rem;
+	}
+	#question {
+		margin-bottom: 0px;
+	}
+}
